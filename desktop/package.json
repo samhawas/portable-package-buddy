@@ -1,0 +1,9 @@
+{
+  "name": "miqat",
+  "productName": "Miqat",
+  "version": "1.0.0",
+  "description": "مواقيت الصلاة والميقات القمري — نسخة محمولة",
+  "main": "main.cjs",
+  "author": "Miqat",
+  "license": "MIT"
+}

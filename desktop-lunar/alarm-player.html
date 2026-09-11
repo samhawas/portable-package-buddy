@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Miqat Alarm Player</title>
+  </head>
+  <body>
+    <script>
+      let activeAudio = null;
+
+      window.playMiqatAlarm = async (source, volume) => {
+        if (!source) return false;
+        try {
+          if (activeAudio) {
+            activeAudio.pause();
+            activeAudio.currentTime = 0;
+          }
+          activeAudio = new Audio(source);
+          activeAudio.volume = Math.min(1, Math.max(0, Number(volume) || 1));
+          await activeAudio.play();
+          return true;
+        } catch {
+          return false;
+        }
+      };
+    </script>
+  </body>
+</html>
